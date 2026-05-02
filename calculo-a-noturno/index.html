@@ -3,24 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cálculo B — Preparatório AV2 | CIMATEC</title>
+<title>Cálculo A — Preparatório AV2 | CIMATEC</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#06121d;
+  --bg:#06111f;
   --navy:#071827;
-  --panel:#0c2730;
-  --panel2:#0f3037;
-  --teal:#20d4bc;
-  --teal2:#18727d;
-  --teal3:#2cf3d8;
+  --panel:#0d1f36;
+  --panel2:#102744;
+  --blue:#18727d;
+  --blue2:#1d8a98;
+  --cyan:#2fd6e6;
   --gold:#d7a646;
+  --gold2:#f0cb74;
   --cream:#f3ead8;
-  --muted:rgba(243,234,216,.70);
-  --muted2:rgba(243,234,216,.45);
+  --muted:rgba(243,234,216,.72);
+  --muted2:rgba(243,234,216,.42);
   --red:#9c2b21;
-  --line:rgba(32,212,188,.28);
-  --goldline:rgba(215,166,70,.34);
+  --line:rgba(215,166,70,.34);
+  --blueline:rgba(47,214,230,.24);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{background:#041019}
@@ -35,15 +36,15 @@ body{
 }
 a{text-decoration:none;color:inherit}
 
-/* HERO — padrão capa premium */
+/* HERO — padrão premium Cálculo A */
 .hero{
   position:relative;
   min-height:570px;
   overflow:hidden;
   background:
-    radial-gradient(circle at 50% 36%, rgba(32,212,188,.18) 0%, rgba(32,212,188,.05) 27%, transparent 48%),
-    radial-gradient(circle at 50% 72%, rgba(215,166,70,.13) 0%, transparent 35%),
-    linear-gradient(155deg,#06111c 0%,#091b2c 48%,#0a2b31 100%);
+    radial-gradient(circle at 50% 40%, rgba(215,166,70,.17) 0%, rgba(215,166,70,.055) 28%, transparent 50%),
+    radial-gradient(circle at 50% 76%, rgba(47,214,230,.10) 0%, transparent 38%),
+    linear-gradient(155deg,#06111f 0%,#09192b 48%,#102a45 100%);
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -56,11 +57,11 @@ a{text-decoration:none;color:inherit}
   content:"";
   position:absolute;
   inset:12px;
-  border:1px solid rgba(32,212,188,.62);
+  border:1px solid rgba(215,166,70,.72);
   border-radius:2px;
   box-shadow:
-    inset 0 0 0 1px rgba(32,212,188,.15),
-    0 0 28px rgba(32,212,188,.10);
+    inset 0 0 0 1px rgba(215,166,70,.10),
+    0 0 28px rgba(215,166,70,.10);
   pointer-events:none;
   z-index:3;
 }
@@ -68,7 +69,7 @@ a{text-decoration:none;color:inherit}
   position:absolute;
   width:42px;
   height:42px;
-  border-color:rgba(32,212,188,.85);
+  border-color:rgba(240,203,116,.90);
   z-index:4;
   opacity:.9;
 }
@@ -82,7 +83,7 @@ a{text-decoration:none;color:inherit}
   width:100%;
   height:100%;
   z-index:0;
-  opacity:.98;
+  opacity:.96;
   pointer-events:none;
 }
 .hero-core{
@@ -99,16 +100,16 @@ a{text-decoration:none;color:inherit}
   align-items:center;
   justify-content:center;
   padding:7px 18px;
-  border:1px solid rgba(32,212,188,.75);
+  border:1px solid rgba(215,166,70,.82);
   border-radius:999px;
   background:rgba(8,24,39,.58);
-  color:var(--teal3);
+  color:var(--gold2);
   font-size:10px;
   font-weight:800;
-  letter-spacing:2.25px;
+  letter-spacing:2.15px;
   text-transform:uppercase;
   margin-bottom:34px;
-  box-shadow:0 0 26px rgba(32,212,188,.14);
+  box-shadow:0 0 26px rgba(215,166,70,.12);
 }
 .kicker{
   font-size:20px;
@@ -128,33 +129,15 @@ a{text-decoration:none;color:inherit}
   color:#fff3da;
   text-transform:uppercase;
   text-shadow:
-    0 1px 0 rgba(215,166,70,.40),
+    0 1px 0 rgba(215,166,70,.45),
     0 10px 24px rgba(0,0,0,.72),
-    0 0 14px rgba(32,212,188,.10);
+    0 0 14px rgba(215,166,70,.12);
   margin-bottom:16px;
-}
-.title span{color:#fff3da}
-.subtitle{
-  font-family:'DM Sans',system-ui,sans-serif;
-  font-size:34px;
-  line-height:1;
-  font-weight:800;
-  color:var(--teal);
-  letter-spacing:-1px;
-  text-shadow:0 8px 22px rgba(0,0,0,.55), 0 0 18px rgba(32,212,188,.16);
-  margin-bottom:28px;
-}
-.topics{
-  font-family:'Playfair Display',serif;
-  font-size:20px;
-  letter-spacing:3px;
-  color:rgba(243,234,216,.82);
-  margin-bottom:24px;
 }
 .hero-line{
   width:72%;
   height:1px;
-  background:linear-gradient(90deg,transparent,rgba(32,212,188,.65),transparent);
+  background:linear-gradient(90deg,transparent,rgba(215,166,70,.72),transparent);
   margin:0 auto 23px;
   position:relative;
 }
@@ -166,8 +149,25 @@ a{text-decoration:none;color:inherit}
   width:12px;
   height:12px;
   transform:translate(-50%,-50%) rotate(45deg);
-  background:var(--teal3);
-  box-shadow:0 0 22px var(--teal3);
+  background:var(--gold2);
+  box-shadow:0 0 22px var(--gold2);
+}
+.subtitle{
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-size:34px;
+  line-height:1;
+  font-weight:800;
+  color:var(--gold2);
+  letter-spacing:-1px;
+  text-shadow:0 8px 22px rgba(0,0,0,.55), 0 0 18px rgba(215,166,70,.16);
+  margin-bottom:28px;
+}
+.topics{
+  font-family:'Playfair Display',serif;
+  font-size:19px;
+  letter-spacing:2.6px;
+  color:rgba(243,234,216,.84);
+  margin-bottom:24px;
 }
 .hero-av2{
   display:inline-block;
@@ -175,38 +175,38 @@ a{text-decoration:none;color:inherit}
   min-width:330px;
   max-width:100%;
   border-radius:8px;
-  background:linear-gradient(135deg,#14717c 0%,#20b4a0 100%);
-  border:1px solid rgba(44,243,216,.42);
-  color:#fff;
+  background:linear-gradient(135deg,#a97710 0%,#d7a646 100%);
+  border:1px solid rgba(255,225,132,.48);
+  color:#091525;
   font-size:12px;
   line-height:1.35;
   font-weight:900;
   letter-spacing:1.7px;
   text-transform:uppercase;
-  box-shadow:0 10px 34px rgba(32,212,188,.22);
+  box-shadow:0 10px 34px rgba(215,166,70,.24);
 }
 .hero-av2 small{
   display:block;
   margin-top:4px;
   font-size:9px;
   letter-spacing:1.2px;
-  color:rgba(255,255,255,.70);
+  color:rgba(9,21,37,.72);
 }
 
 /* blocos */
 .tagline{
-  background:linear-gradient(180deg,#12363d,#102e34);
+  background:linear-gradient(180deg,#102744,#0d2138);
   padding:20px 24px;
   text-align:center;
-  border-top:1px solid rgba(32,212,188,.16);
-  border-bottom:1px solid rgba(32,212,188,.18);
+  border-top:1px solid rgba(215,166,70,.16);
+  border-bottom:1px solid rgba(215,166,70,.18);
 }
 .tagline p{
   font-size:13.5px;
   line-height:1.7;
   color:rgba(243,234,216,.88);
 }
-.tagline strong{color:var(--teal3);font-weight:800}
+.tagline strong{color:var(--gold2);font-weight:800}
 .urg{
   background:linear-gradient(90deg,#8d241d,#b13225,#8d241d);
   padding:12px 22px;
@@ -218,11 +218,11 @@ a{text-decoration:none;color:inherit}
   text-transform:uppercase;
 }
 .ctx,.sec,.how,.prof,.price{
-  background:linear-gradient(180deg,#0d2a30,#0a2329);
+  background:linear-gradient(180deg,#0d2138,#0a192c);
 }
 .ctx{
   padding:24px 24px 26px;
-  border-bottom:1px solid rgba(32,212,188,.11);
+  border-bottom:1px solid rgba(215,166,70,.10);
 }
 .ctx p{
   color:rgba(243,234,216,.86);
@@ -231,11 +231,11 @@ a{text-decoration:none;color:inherit}
 }
 .ctx p+p{margin-top:12px}
 .ctx strong{color:#fff;font-weight:800}
-.ctx em{font-style:normal;color:var(--teal3);font-weight:800}
+.ctx em{font-style:normal;color:var(--gold2);font-weight:800}
 
 .sec{
   padding:30px 24px;
-  border-bottom:1px solid rgba(32,212,188,.10);
+  border-bottom:1px solid rgba(215,166,70,.10);
 }
 .sec-hdr{
   display:flex;
@@ -251,7 +251,7 @@ a{text-decoration:none;color:inherit}
 }
 .sec-title{
   white-space:nowrap;
-  color:var(--teal3);
+  color:var(--gold2);
   font-size:12px;
   font-weight:900;
   letter-spacing:2.7px;
@@ -270,8 +270,8 @@ a{text-decoration:none;color:inherit}
   align-items:center;
   gap:9px;
   padding:12px 13px;
-  border:1px solid rgba(32,212,188,.22);
-  background:linear-gradient(135deg,rgba(32,212,188,.075),rgba(255,255,255,.025));
+  border:1px solid rgba(215,166,70,.26);
+  background:linear-gradient(135deg,rgba(215,166,70,.070),rgba(255,255,255,.025));
   border-radius:8px;
   color:rgba(243,234,216,.91);
   font-size:11.4px;
@@ -280,7 +280,7 @@ a{text-decoration:none;color:inherit}
 .clist span{
   width:20px;
   flex-shrink:0;
-  color:var(--teal3);
+  color:var(--gold2);
   font-size:17px;
   text-align:center;
 }
@@ -293,44 +293,38 @@ a{text-decoration:none;color:inherit}
 }
 
 /* cronograma */
-.enc-grid{
+.turmas{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:8px;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
   margin-bottom:12px;
 }
-.enc{
-  min-height:128px;
-  padding:13px 10px;
-  border-radius:9px;
-  border:1px solid rgba(32,212,188,.28);
-  background:linear-gradient(180deg,rgba(32,212,188,.075),rgba(8,22,32,.35));
+.turma{
+  padding:16px 13px;
+  border-radius:10px;
+  border:1px solid rgba(215,166,70,.30);
+  background:linear-gradient(180deg,rgba(215,166,70,.075),rgba(8,22,32,.34));
 }
-.enc-num{
-  color:var(--teal3);
+.turma-ic{font-size:24px;margin-bottom:5px}
+.turma-label{
+  color:var(--gold2);
   text-transform:uppercase;
-  font-size:8px;
+  font-size:8.5px;
   font-weight:900;
   letter-spacing:2px;
-  margin-bottom:5px;
 }
-.enc-dia{
-  font-size:12px;
+.turma-title{
+  font-size:16px;
   line-height:1.1;
   font-weight:900;
   color:#fff;
-  margin-bottom:5px;
-}
-.enc-hora{
-  font-family:'JetBrains Mono',monospace;
-  font-size:9.5px;
-  color:rgba(243,234,216,.62);
   margin-bottom:8px;
 }
-.enc-tema{
-  font-size:9.7px;
-  line-height:1.35;
-  color:rgba(243,234,216,.48);
+.turma-line{
+  font-family:'JetBrains Mono',monospace;
+  font-size:9.2px;
+  color:rgba(243,234,216,.62);
+  line-height:1.55;
 }
 .aulao{
   display:flex;
@@ -338,17 +332,17 @@ a{text-decoration:none;color:inherit}
   gap:14px;
   padding:15px 16px;
   border-radius:10px;
-  border:1px solid rgba(32,212,188,.45);
+  border:1px solid rgba(215,166,70,.48);
   background:
-    radial-gradient(circle at 14% 50%,rgba(32,212,188,.22),transparent 28%),
-    linear-gradient(135deg,rgba(32,212,188,.13),rgba(255,255,255,.03));
-  box-shadow:0 0 22px rgba(32,212,188,.08);
+    radial-gradient(circle at 14% 50%,rgba(215,166,70,.22),transparent 28%),
+    linear-gradient(135deg,rgba(215,166,70,.13),rgba(255,255,255,.03));
+  box-shadow:0 0 22px rgba(215,166,70,.08);
 }
 .aulao-ic{
   width:48px;
   height:48px;
   border-radius:10px;
-  background:linear-gradient(135deg,#14717c,#20b4a0);
+  background:linear-gradient(135deg,#a97710,#d7a646);
   display:flex;
   align-items:center;
   justify-content:center;
@@ -356,7 +350,7 @@ a{text-decoration:none;color:inherit}
   flex-shrink:0;
 }
 .aulao-label{
-  color:var(--teal3);
+  color:var(--gold2);
   font-size:8.5px;
   font-weight:900;
   text-transform:uppercase;
@@ -406,14 +400,14 @@ a{text-decoration:none;color:inherit}
 }
 .how{
   padding:22px 24px;
-  border-bottom:1px solid rgba(32,212,188,.14);
+  border-bottom:1px solid rgba(215,166,70,.14);
 }
 .how p{
   font-size:12.5px;
   line-height:1.78;
   color:rgba(243,234,216,.82);
 }
-.how strong{color:var(--teal3)}
+.how strong{color:var(--gold2)}
 .how em{font-style:normal;color:#fff;font-weight:900}
 
 /* professor */
@@ -422,8 +416,8 @@ a{text-decoration:none;color:inherit}
   align-items:center;
   gap:16px;
   padding:22px 24px;
-  border-top:1px solid rgba(32,212,188,.18);
-  border-bottom:1px solid rgba(32,212,188,.18);
+  border-top:1px solid rgba(215,166,70,.18);
+  border-bottom:1px solid rgba(215,166,70,.18);
 }
 .prof-img{
   width:78px;
@@ -431,12 +425,12 @@ a{text-decoration:none;color:inherit}
   border-radius:50%;
   object-fit:cover;
   object-position:center 20%;
-  border:2.5px solid rgba(32,212,188,.78);
-  box-shadow:0 0 0 4px rgba(32,212,188,.12),0 0 24px rgba(32,212,188,.14);
+  border:2.5px solid rgba(215,166,70,.82);
+  box-shadow:0 0 0 4px rgba(215,166,70,.12),0 0 24px rgba(215,166,70,.14);
   flex-shrink:0;
 }
 .prof-name{
-  color:var(--teal3);
+  color:var(--gold2);
   font-size:15.5px;
   font-weight:900;
   margin-bottom:4px;
@@ -452,7 +446,7 @@ a{text-decoration:none;color:inherit}
 .price{
   padding:28px 24px 24px;
   text-align:center;
-  border-bottom:1px solid rgba(32,212,188,.14);
+  border-bottom:1px solid rgba(215,166,70,.14);
 }
 .price-l{
   color:rgba(243,234,216,.35);
@@ -472,7 +466,7 @@ a{text-decoration:none;color:inherit}
 }
 .price-v .c{
   font-size:31px;
-  color:var(--teal3);
+  color:var(--gold2);
   vertical-align:super;
   margin-right:3px;
 }
@@ -508,13 +502,13 @@ a{text-decoration:none;color:inherit}
   width:100%;
   padding:17px 18px;
   border-radius:10px;
-  background:linear-gradient(135deg,#14717c,#20d4bc);
-  color:#fff;
+  background:linear-gradient(135deg,#a97710,#d7a646);
+  color:#091525;
   font-size:15px;
   font-weight:900;
   letter-spacing:2.1px;
   text-transform:uppercase;
-  box-shadow:0 12px 34px rgba(32,212,188,.25);
+  box-shadow:0 12px 34px rgba(215,166,70,.25);
 }
 .price-vg{
   margin-top:12px;
@@ -534,7 +528,7 @@ a{text-decoration:none;color:inherit}
 
 /* footer */
 .foot{
-  background:#06121d;
+  background:#06111f;
   padding:18px 24px 22px;
   text-align:center;
 }
@@ -547,7 +541,7 @@ a{text-decoration:none;color:inherit}
   margin-bottom:5px;
   color:rgba(243,234,216,.55);
 }
-.foot-row a{color:var(--teal3);font-weight:700}
+.foot-row a{color:var(--gold2);font-weight:700}
 .foot-l{
   color:rgba(243,234,216,.20);
   font-size:9px;
@@ -555,10 +549,9 @@ a{text-decoration:none;color:inherit}
 }
 @media(max-width:420px){
   .title{font-size:46px}
-  .subtitle{font-size:38px}
+  .subtitle{font-size:30px}
   .hero{min-height:548px}
-  .enc-grid{grid-template-columns:1fr}
-  .enc{min-height:auto}
+  .turmas{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -569,135 +562,118 @@ a{text-decoration:none;color:inherit}
 
   <svg class="hero-svg" viewBox="0 0 480 570" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
     <defs>
-      <linearGradient id="surf" x1="0" x2="1" y1="0" y2="1">
-        <stop offset="0%" stop-color="#20f1d7" stop-opacity=".72"/>
-        <stop offset="100%" stop-color="#18727d" stop-opacity=".24"/>
+      <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0%" stop-color="#f0cb74" stop-opacity=".72"/>
+        <stop offset="100%" stop-color="#d7a646" stop-opacity=".22"/>
       </linearGradient>
-      <linearGradient id="gold" x1="0" x2="1">
-        <stop offset="0%" stop-color="#f0cb74" stop-opacity=".55"/>
-        <stop offset="100%" stop-color="#d7a646" stop-opacity=".16"/>
+      <linearGradient id="blue" x1="0" x2="1">
+        <stop offset="0%" stop-color="#2fd6e6" stop-opacity=".58"/>
+        <stop offset="100%" stop-color="#18727d" stop-opacity=".18"/>
       </linearGradient>
-      <filter id="glow"><feGaussianBlur stdDeviation="2.1" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <filter id="glow"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     </defs>
 
-    <!-- Fórmulas de cálculo vetorial, discretas -->
-    <g opacity=".38" font-family="Georgia, serif" font-style="italic" fill="#20d4bc">
-      <text x="30" y="88" font-size="18">∇f =</text>
-      <text x="78" y="63" font-size="13">⎛ ∂f/∂x ⎞</text>
-      <text x="78" y="83" font-size="13">⎜ ∂f/∂y ⎟</text>
-      <text x="78" y="103" font-size="13">⎝ ∂f/∂z ⎠</text>
-      <text x="318" y="82" font-size="15">∇ × F =</text>
-      <text x="372" y="64" font-size="9.5">∂Fz/∂y − ∂Fy/∂z</text>
-      <text x="372" y="82" font-size="9.5">∂Fx/∂z − ∂Fz/∂x</text>
-      <text x="372" y="100" font-size="9.5">∂Fy/∂x − ∂Fx/∂y</text>
+    <!-- Fórmulas discretas -->
+    <g opacity=".38" font-family="Georgia, serif" font-style="italic" fill="#d7a646">
+      <text x="30" y="76" font-size="15">f '(x) = lim</text>
+      <text x="103" y="88" font-size="9">h→0</text>
+      <text x="126" y="70" font-size="11">f(x+h) − f(x)</text>
+      <line x1="126" y1="75" x2="203" y2="75" stroke="#d7a646" stroke-opacity=".38"/>
+      <text x="158" y="90" font-size="11">h</text>
+      <text x="354" y="76" font-size="15">d</text>
+      <line x1="351" y1="81" x2="371" y2="81" stroke="#d7a646" stroke-opacity=".42"/>
+      <text x="349" y="96" font-size="15">dx</text>
+      <text x="376" y="86" font-size="15">xⁿ = n xⁿ⁻¹</text>
     </g>
 
-    <!-- Superfície 3D no topo -->
-    <g transform="translate(72 116)" opacity=".82" filter="url(#glow)">
-      <line x1="160" y1="120" x2="160" y2="18" stroke="#20d4bc" stroke-opacity=".42" stroke-width="1"/>
-      <polygon points="160,18 156,28 164,28" fill="#20d4bc" fill-opacity=".42"/>
-      <text x="169" y="30" fill="#20d4bc" fill-opacity=".55" font-family="Georgia,serif" font-style="italic" font-size="15">z</text>
-      <line x1="160" y1="120" x2="60" y2="154" stroke="#20d4bc" stroke-opacity=".30"/>
-      <polygon points="60,154 68,146 70,155" fill="#20d4bc" fill-opacity=".33"/>
-      <text x="42" y="164" fill="#20d4bc" fill-opacity=".45" font-family="Georgia,serif" font-style="italic" font-size="15">x</text>
-      <line x1="160" y1="120" x2="285" y2="155" stroke="#20d4bc" stroke-opacity=".30"/>
-      <polygon points="285,155 274,155 279,146" fill="#20d4bc" fill-opacity=".33"/>
-      <text x="292" y="164" fill="#20d4bc" fill-opacity=".45" font-family="Georgia,serif" font-style="italic" font-size="15">y</text>
+    <!-- Gráfico lateral com tangente correta -->
+    <g transform="translate(62 318)" opacity=".86" filter="url(#glow)">
+      <line x1="20" y1="162" x2="330" y2="162" stroke="#2fd6e6" stroke-opacity=".44" stroke-width="1.2"/>
+      <polygon points="330,162 318,157 318,167" fill="#2fd6e6" fill-opacity=".55"/>
+      <text x="338" y="170" fill="#2fd6e6" fill-opacity=".65" font-family="Georgia,serif" font-style="italic" font-size="16">x</text>
+      <line x1="78" y1="162" x2="78" y2="34" stroke="#2fd6e6" stroke-opacity=".44" stroke-width="1.2"/>
+      <polygon points="78,34 73,46 83,46" fill="#2fd6e6" fill-opacity=".55"/>
+      <text x="72" y="25" fill="#2fd6e6" fill-opacity=".65" font-family="Georgia,serif" font-style="italic" font-size="16">y</text>
 
-      <!-- malha superfície: curvas horizontais -->
-      <path d="M40 128 C90 110,125 105,160 121 C200 140,238 135,286 120" stroke="url(#surf)" stroke-width="1.2" fill="none"/>
-      <path d="M48 113 C94 91,130 83,166 104 C205 126,239 122,280 106" stroke="url(#surf)" stroke-width="1.2" fill="none"/>
-      <path d="M58 99 C103 74,139 63,174 88 C207 113,240 106,272 88" stroke="url(#surf)" stroke-width="1.2" fill="none"/>
-      <path d="M76 86 C112 62,147 43,182 69 C212 92,237 83,257 70" stroke="url(#surf)" stroke-width="1.2" fill="none"/>
-      <path d="M96 75 C123 51,153 29,190 53 C216 70,236 62,248 52" stroke="url(#surf)" stroke-width="1.1" fill="none"/>
+      <!-- curva cúbica/suave e tangente no ponto: a linha coincide localmente, sem secante grosseira -->
+      <path d="M26 129 C74 190,128 169,166 113 C202 60,240 78,302 112" stroke="url(#blue)" stroke-width="2.4" fill="none"/>
+      <text x="260" y="92" fill="#2fd6e6" fill-opacity=".65" font-family="Georgia,serif" font-style="italic" font-size="14">y=f(x)</text>
 
-      <!-- malha superfície: curvas verticais -->
-      <path d="M70 132 C91 108,110 88,126 64" stroke="url(#surf)" stroke-width="1" fill="none"/>
-      <path d="M104 126 C124 99,145 76,158 45" stroke="url(#surf)" stroke-width="1" fill="none"/>
-      <path d="M140 121 C157 93,177 74,190 52" stroke="url(#surf)" stroke-width="1" fill="none"/>
-      <path d="M177 126 C194 104,211 88,226 61" stroke="url(#surf)" stroke-width="1" fill="none"/>
-      <path d="M216 130 C232 112,247 100,264 85" stroke="url(#surf)" stroke-width="1" fill="none"/>
+      <!-- ponto de tangência -->
+      <circle cx="166" cy="113" r="4.2" fill="#2fd6e6"/>
+      <line x1="166" y1="113" x2="166" y2="162" stroke="#2fd6e6" stroke-opacity=".50" stroke-dasharray="5 5"/>
+      <text x="160" y="178" fill="#2fd6e6" fill-opacity=".70" font-family="Georgia,serif" font-style="italic" font-size="15">a</text>
 
-      <!-- curvas de nível no plano -->
-      <path d="M60 170 C105 150,220 148,280 168" stroke="#20d4bc" stroke-opacity=".25" stroke-dasharray="5 5" fill="none"/>
-      <path d="M36 183 C98 156,238 154,310 178" stroke="#20d4bc" stroke-opacity=".20" stroke-dasharray="5 5" fill="none"/>
-      <path d="M16 197 C92 162,256 158,336 190" stroke="#20d4bc" stroke-opacity=".16" stroke-dasharray="5 5" fill="none"/>
-      <circle cx="190" cy="53" r="4.5" fill="#20f1d7" fill-opacity=".95"/>
+      <!-- reta tangente: construída com a mesma inclinação local da curva no ponto -->
+      <line x1="58" y1="186" x2="282" y2="18" stroke="url(#gold)" stroke-width="2"/>
+      <text x="248" y="44" fill="#f0cb74" fill-opacity=".70" font-family="Georgia,serif" font-style="italic" font-size="13">y = f'(a)(x-a)+f(a)</text>
     </g>
 
-    <!-- textura sutil -->
-    <g opacity=".12" stroke="#20d4bc" fill="none">
+    <!-- textura de linhas suaves -->
+    <g opacity=".11" stroke="#2fd6e6" fill="none">
       <path d="M18 514 C80 478,116 548,170 514 C228 478,290 545,356 510 C400 486,430 492,462 510"/>
       <path d="M18 528 C80 492,116 562,170 528 C228 492,290 559,356 524 C400 500,430 506,462 524"/>
       <path d="M20 34 C85 62,130 18,194 40 C258 64,296 18,364 42 C414 60,438 54,462 42"/>
+      <path d="M110 270 C170 222,284 220,358 266"/>
+      <path d="M126 285 C188 244,278 242,342 282"/>
     </g>
   </svg>
 
   <div class="hero-core">
     <div class="badge">Exclusivo para alunos(as) do CIMATEC</div>
     <div class="kicker">Passe em</div>
-    <div class="title">CÁLCULO B</div>
+    <div class="title">CÁLCULO A</div>
     <div class="hero-line"></div>
     <div class="subtitle">Preparatório AV2</div>
-    <div class="topics">Gradiente · Rotacional · Campos</div>
-    <div class="hero-av2">Teoria objetiva + questões reais de AV2<small>Ao vivo pelo Zoom · Vagas limitadas</small></div>
+    <div class="topics">Derivadas · Regras · Aplicações</div>
+    <div class="hero-av2">Turma Noturna · Questões reais de AV2<small>Aulão final unificado no sábado à tarde</small></div>
   </div>
 </header>
 
 <section class="tagline">
-  <p>Domine gradiente, divergência, rotacional e campos conservativos. Aprenda o conteúdo e o modelo específico de questões que cai na sua prova, com base em <strong>questões reais de AV2 do CIMATEC</strong>.</p>
+  <p><strong>Turma Noturna nos dois primeiros encontros.</strong> Aprenda derivadas de verdade e domine o modelo específico de questões que cai na sua prova, com base em <strong>questões reais de AV2 do CIMATEC</strong>.</p>
 </section>
 
 <div class="urg">Vagas limitadas · Ao vivo pelo Zoom</div>
 
 <section class="ctx">
   <p>As avaliações de Cálculo do CIMATEC são <strong>provas objetivas</strong>. Durante o semestre, os alunos são treinados para resolver outros tipos de questões. Na hora da prova, encontram um modelo totalmente diferente: questões de múltipla escolha que exigem leitura atenta, análise de vários itens e agilidade na resolução.</p>
-  <p>Este curso foi criado para quem quer <em>passar em Cálculo B de vez</em> — você aprende o conteúdo e, ao mesmo tempo, o modelo específico de prova do CIMATEC: questões objetivas que exigem raciocínio rápido e leitura precisa das alternativas.</p>
+  <p>Este curso foi criado para quem quer <em>passar em Cálculo A de vez</em>, na <strong>Turma Noturna</strong> — você aprende o conteúdo e, ao mesmo tempo, o modelo específico de prova do CIMATEC: questões objetivas que exigem raciocínio rápido e leitura precisa das alternativas.</p>
 </section>
 
 <section class="sec">
   <div class="sec-hdr"><span class="sec-title">Conteúdo programático</span></div>
   <ul class="clist">
-    <li><span>∂</span>Derivadas parciais e regra da cadeia</li>
-    <li><span>∇</span>Gradiente de campo escalar</li>
-    <li><span>↗</span>Derivada direcional e vetor gradiente</li>
-    <li><span>∇·</span>Divergência de campo vetorial</li>
-    <li><span>×</span>Rotacional de campo vetorial</li>
-    <li><span>⚡</span>Campos conservativos</li>
-    <li><span>φ</span>Função potencial</li>
-    <li><span>W</span>Trabalho de um campo conservativo</li>
+    <li><span>📖</span>Definição de derivada</li>
+    <li><span>📍</span>Derivada em um ponto</li>
+    <li><span>📋</span>Tabela de derivadas</li>
+    <li><span>Σ</span>Regras de derivação (soma, produto, quociente)</li>
+    <li><span>🔗</span>Regra da cadeia</li>
+    <li><span>fx</span>Diferenciação implícita</li>
+    <li><span>f″</span>Derivadas de ordem superior</li>
+    <li><span>↔</span>Derivada da função inversa</li>
+    <li><span>📐</span>Equação da reta tangente</li>
+    <li><span>H</span>Regras de L'Hôpital</li>
   </ul>
   <p class="cnota">O conteúdo acima representa a cobertura máxima do curso. Tópicos eventualmente não cobrados na prova serão substituídos por mais tempo de resolução de questões.</p>
 </section>
 
 <section class="sec">
-  <div class="sec-hdr"><span class="sec-title">Cronograma</span></div>
-  <div class="enc-grid">
-    <div class="enc">
-      <div class="enc-num">Enc. 1</div>
-      <div class="enc-dia">Qua 06/mai</div>
-      <div class="enc-hora">14h–15h30</div>
-      <div class="enc-tema">Derivadas parciais · Regra da cadeia · Gradiente</div>
-    </div>
-    <div class="enc">
-      <div class="enc-num">Enc. 2</div>
-      <div class="enc-dia">Sex 08/mai</div>
-      <div class="enc-hora">14h–15h30</div>
-      <div class="enc-tema">Derivada direcional · Divergência · Rotacional</div>
-    </div>
-    <div class="enc">
-      <div class="enc-num">Enc. 3</div>
-      <div class="enc-dia">Dom 10/mai</div>
-      <div class="enc-hora">14h–15h30</div>
-      <div class="enc-tema">Campos conservativos · Função potencial · Trabalho</div>
+  <div class="sec-hdr"><span class="sec-title">Cronograma — Turma Noturna</span></div>
+  <div class="turmas" style="grid-template-columns:1fr;">
+    <div class="turma">
+      <div class="turma-ic">🌙</div>
+      <div class="turma-label">Turma Noturna</div>
+      <div class="turma-title">Terça e Quinta</div>
+      <div class="turma-line">Terça 05/mai · 19h–20h30<br>Quinta 07/mai · 19h–20h30</div>
     </div>
   </div>
   <div class="aulao">
     <div class="aulao-ic">🏆</div>
     <div>
-      <div class="aulao-label">Aulão final</div>
-      <div class="aulao-title">Terça 12/mai · 14h–16h30</div>
-      <div class="aulao-detail">Resolução de questões de AV2 anteriores + tira-dúvidas ao vivo</div>
+      <div class="aulao-label">Aulão final — turmas unificadas</div>
+      <div class="aulao-title">Sábado 09/mai · 14h–16h30</div>
+      <div class="aulao-detail">Atenção: o aulão final da Turma Noturna será no sábado à tarde.</div>
     </div>
   </div>
 </section>
@@ -711,7 +687,7 @@ a{text-decoration:none;color:inherit}
     </div>
     <div class="feat">
       <div class="feat-ic">🎯</div>
-      <div><div class="feat-tt">Teoria objetiva</div><div class="feat-ds">Campos vetoriais de verdade, direto ao ponto</div></div>
+      <div><div class="feat-tt">Teoria objetiva</div><div class="feat-ds">Derivadas de verdade, direto ao ponto</div></div>
     </div>
     <div class="feat">
       <div class="feat-ic">📑</div>
@@ -742,20 +718,20 @@ a{text-decoration:none;color:inherit}
 
 <section class="price">
   <div class="price-l">Investimento</div>
-  <div class="price-v"><span class="c">R$</span>497</div>
-  <div class="price-s">3 encontros + aulão · ~7h ao vivo pelo Zoom</div>
+  <div class="price-v"><span class="c">R$</span>397</div>
+  <div class="price-s">2 encontros + aulão · ~5h ao vivo pelo Zoom</div>
   <div class="price-inc">
     <div class="inc">Tabela de derivadas + resumo com fórmulas e teoremas + lista de questões</div>
     <div class="inc">PDF com slides e resoluções após cada encontro</div>
     <div class="inc">Tira-dúvidas ao vivo em cada encontro</div>
   </div>
-  <a class="price-btn" href="https://chk.eduzz.com/VWGNPN1X07">Garantir vaga em Cálculo B</a>
+  <a class="price-btn" href="https://chk.eduzz.com/KW8Z7Z2K01">Garantir vaga na Noturna</a>
   <div class="price-vg">Turma limitada</div>
   <div class="price-g">Reembolso integral garantido até antes do primeiro encontro.</div>
 </section>
 
 <footer class="foot">
-  <div class="foot-row">📱 <a href="https://chk.eduzz.com/VWGNPN1X07">WhatsApp (71) 98554-2462</a></div>
+  <div class="foot-row">📱 <a href="https://chk.eduzz.com/KW8Z7Z2K01">WhatsApp (71) 98554-2462</a></div>
   <div class="foot-row">▶️ <a href="https://youtube.com/@prof_andrecp">youtube.com/@prof_andrecp</a></div>
   <div class="foot-l">Prof. André Carvalho · 2026</div>
 </footer>
